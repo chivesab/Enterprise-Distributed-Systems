@@ -1,0 +1,18 @@
+<!doctype html>
+
+<title>Upload new File</title>
+<div style="align-content: center;display: flex;flex-direction: column;">
+  <h1>Upload new File</h1>
+  <form 
+    style="align-content: center;display: flex;flex-direction: column;width: fit-content;"
+    method=post 
+    enctype=multipart/form-data 
+    action="/upload"
+  >
+    <input type=file name=file accept=".py">
+    <input type=submit value=Upload>
+    {% if error %}
+    <div style="color: red">{{ error }}</div>
+    {% endif %}
+  </form>
+</div>
